@@ -1,0 +1,103 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- Main Content - start -->
+<main>
+<section class="container stylization maincont">
+
+{% for message in messages %}
+	<h3>{{message}}</h3>
+{% endfor %}
+<ul class="b-crumbs">
+	<li>
+		<a href="/products/back">
+			Home
+		</a>
+	</li>
+	<li>
+		<span>Cart</span>
+	</li>
+</ul>
+<h1 class="main-ttl"><span>Cart</span></h1>
+<!-- Cart Items - start -->
+
+	<div class="cart-items-wrap">
+		<table class="cart-items">
+			<thead>
+			<tr>
+				<td class="cart-image">Photo</td>
+				<td class="cart-ttl">Products</td>
+				<td class="cart-price">Price</td>
+<!--				<td class="cart-quantity">Quantity</td>-->
+				<td class="cart-summ">Category</td>
+				<td class="cart-del">&nbsp;</td>
+			</tr>
+			</thead>
+			<tbody>
+				<tr>
+                    {% for cart in cart %}
+                    {% if user.username == cart.name %}
+
+					<td class="cart-image">
+						<a href="product">
+							<img src="{{cart.item_url}}" alt="Similique delectus totam">
+						</a>
+					</td>
+					<td class="cart-ttl">
+						{{cart.item}}
+					</td>
+					<td class="cart-price">
+						<b>{{cart.item_price}}</b>
+					</td>
+
+					<td class="cart-summ">
+						<b>{{cart.product}}</b>
+						<p class="cart-forone">unit price <b>{{cart.item_price}}</b></p>
+					</td>
+
+					<td>
+						<form action="/products/remove" method="post">
+							{% csrf_token %}
+							<input type="hidden" value="{{cart.id}}" name="info">
+							<button type="submit" value="Remove">Remove</button>
+						</form>
+					</td>
+					<td>
+					</td>
+				</tr>
+                {% endif %}
+                {% endfor %}
+			</tbody>
+		</table>
+
+		<ul class="cart-total">
+			<li class="cart-summ">TOTAL: <b>{{add}}</b></li>
+		</ul>
+
+	<table class="cart-items">
+		<tr>
+			<td >
+				<form action="/products/clear_cart" method="post">
+					{% csrf_token %}
+					<input type="hidden" value="{{user.username}}" name="username">
+					<button type="submit" class="cart-clear">Clear cart</button>
+				</form>
+			</td>
+			<td>
+				<form action="/products/checkout" method="get">
+					<input type="hidden" value="{{user.username}}" name="usermame">
+					<p align="right"><button type="submit" >Checkout</button></p>
+				</form>
+			</td>
+
+		</tr>
+	</table>
+	</div>
+<!-- Cart Items - end -->
+
+</section>
+</main>
+<!-- Main Content - end -->
+{% endblock %}

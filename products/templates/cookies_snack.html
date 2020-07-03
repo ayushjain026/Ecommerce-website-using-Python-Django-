@@ -1,0 +1,64 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/91POvPM7J-L._SX425_.jpg" width="60" height="50" class="d-inline-block align-top" alt="" align="left">
+      <h3>  &nbspCookies & Snack</h3>
+  </a>
+</nav>
+<!doctype html>
+<body lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Cookies and Snack</title>
+  </head>
+<body>
+
+<center>
+
+        {% for message in messages %}
+        {{message}}
+        {% endfor %}
+<div class="row">
+    {% for product in dal_rice %}
+     <div class="col">
+        <div class="card" style="width:18rem;heigt:23rem;" >
+            <img src="{{ product.image_url }}" height="150px" width="300px"   alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text">Rs {{  product.price}}/-     &nbsp{{  product.stock}}gm</p>
+
+                {% if user.is_authenticated %}
+                <form action="/products/cart" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" value="{{ product.name }}" name="item_name">
+                    <input type="hidden" value="{{ product.price }}" name="item_price">
+                    <input type="hidden" value=1 name="quantity">
+                    <input type="hidden" value="{{ product.image_url }}" name="item_url">
+                    <input type="hidden" value="Cookies and Snack" name="product">
+                    <input type="hidden" value="{{user.username}}" name="name">
+                    <button type="submit" class="btn btn-primary">Add to Cart</button><br><br><br>
+                {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></body>
+</body>
+</html>
+
+{% endblock %}

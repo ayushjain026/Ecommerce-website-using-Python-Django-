@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- Main Content - start -->
+<main>
+<section class="container stylization maincont">
+
+
+<ul class="b-crumbs">
+	<li>
+		<a href="index.html">
+			Home
+		</a>
+	</li>
+	<li>
+		<span>Contacts</span>
+	</li>
+</ul>
+<h1 class="main-ttl"><span>Contacts</span></h1>
+<!-- Contacts - start -->
+<br>
+<div class="iconbox-wrap">
+	<div class="row iconbox-list">
+		<div class="cf-xs-6 cf-sm-4 cf-lg-4 col-xs-6 col-sm-4 iconbox-i">
+			<p class="iconbox-i-img"><!-- NO SPACE --><img src="{% static 'img/contacts/1.png' %}" alt=""><!-- NO SPACE --></p>
+			<h3 class="iconbox-i-ttl">18012011026</h3>
+			This is my Enrollnment No<br>
+
+			<span class="iconbox-i-margin"></span>
+		</div>
+		<div class="cf-xs-6 cf-sm-4 cf-lg-4 col-xs-6 col-sm-4 iconbox-i">
+			<p class="iconbox-i-img"><!-- NO SPACE --><img src="{% static 'img/contacts/2.JPG' %}" alt=""><!-- NO SPACE --></p>
+			<h3 class="iconbox-i-ttl">Ayush Pankaj Jain</h3>
+			From 4CE-A(2018 Batch)
+			<span class="iconbox-i-margin"></span>
+		</div>
+		<div class="cf-xs-6 cf-sm-4 cf-lg-4 col-xs-6 col-sm-4 iconbox-i">
+			<p class="iconbox-i-img"><!-- NO SPACE --><img src="{% static 'img/contacts/3.png' %}" alt=""><!-- NO SPACE --></p>
+			<h3 class="iconbox-i-ttl">I am an intern of silwerwings.Pvt</h3>
+			This is my project<br>
+			It's an E-commerse Websight
+			<span class="iconbox-i-margin"></span>
+		</div>
+	</div>
+</div>
+</section>
+</main>
+<!-- Main Content - end -->
+
+{% endblock %}

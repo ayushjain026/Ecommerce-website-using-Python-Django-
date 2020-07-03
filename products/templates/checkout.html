@@ -1,0 +1,57 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block content %}
+
+
+<main>
+<section class="container stylization maincont">
+
+<div class="auth-wrap">
+<h1>Process to Checkout</h1>
+    {% for message in messages %}
+    {{message}}
+    {% endfor %}
+        <form action="/products/buy" method="post">
+        {% csrf_token %}
+            <p>
+                <input type="hidden" value="{{user.username}}" name="user">
+            </p>
+            <p>
+                <label for="name" width="50px">Full Name <span class="required">*</span></label>
+                <input type="text" name="fullname" value="{{user.first_name}}&nbsp{{user.last_name}}">
+            </p>
+            <p>
+                <label for="name" width="50px">Phone Number <span class="required">*</span></label>
+                <input type="text"  id="name" name="phone" >
+            </p>
+            <p>
+                <label for="name" width="50px">E-Mail<span class="required">*</span></label>
+                <input type="email" name="email" value="{{user.email}}">
+            </p>
+            <p>
+                <label width="50px">City <span class="required">*</span></label>
+                <input type="text" name="city">
+            </p>
+            <p>
+                <label color="red">District <span class="required">*</span></label>
+                <input type="text" name="district">
+            </p>
+            <p>
+                <label>Address<span class="required">*</span></label>
+                <textarea name="address" rows="5" cols="10"></textarea>
+            </p>
+            <p>
+                <label>Order Note<span class="required">*</span></label>
+                <textarea name="note" rows="2" cols="2"></textarea>
+            </p>
+            <p>
+            <label>Note: Mode of Payment will be Cash on delivery and you may use credit/debit card for payment<span class="required">*</span></label>
+            </p>
+            <p class="auth-submit">
+                <input type="submit"  value="submit"/>
+            </p>
+        </form>
+    </div>
+</section>
+</main>
+{% endblock %}

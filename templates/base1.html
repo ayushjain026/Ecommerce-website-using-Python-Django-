@@ -1,0 +1,531 @@
+{% load static %}
+
+
+<html lang="en">
+
+<!-- Mirrored from allstore-html.real-web.pro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jan 2020 11:41:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<title>AllStore</title>
+
+	<link href="{% static 'https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet' %}">
+
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/ion.rangeSlider.css' %}">
+	<link rel="stylesheet" href="{% static 'css/ion.rangeSlider.skinFlat.css' %}">
+	<link rel="stylesheet" href="{% static 'css/jquery.bxslider.css' %}">
+	<link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}">
+	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/media.css' %}">
+
+</head>
+<body>
+<!-- Header - start -->
+<header class="header">
+
+	<!-- Topbar - start -->
+	<div class="header_top">
+		<div class="container">
+			<ul class="contactinfo nav nav-pills">
+				<li>
+					<i class='fa fa-phone'></i> +9898779117
+				</li>
+				<li>
+					<i class="fa fa-envelope"></i> starayush128@gmail.com
+				</li>
+			</ul>
+			<!-- Social links -->
+<ul class="social-icons nav navbar-nav">
+	<li>
+		<a href="{% static 'http://google.com/' %}" rel="nofollow" target="_blank">
+			<i class="fa fa-google-plus"></i>
+		</a>
+	</li>
+
+</ul>
+		</div>
+	</div>
+	<!-- Topbar - end -->
+
+	<!-- Logo, Shop-menu - start -->
+	<div class="header-middle">
+		<div class="container header-middle-cont">
+			<div class="toplogo">
+				<a href="/accounts/contacts">
+					<img src="{% static 'img/logo.png' %}" alt="AllStore - MultiConcept eCommerce Template">
+				</a>
+			</div>
+			<div class="shop-menu">
+				<ul>
+					{% if user.is_authenticated %}
+					<li><h4>Hello, {{user.username}}</h4></li>
+					<a href="{% url 'logout' %}">
+							<i class="fa fa-lock"></i>
+							<span class="shop-menu-ttl">logout</span>
+					</a>
+					{% else %}
+					<li class="topauth">
+						<a href="{% url 'register' %}">
+							<i class="fa fa-lock"></i>
+							<span class="shop-menu-ttl">Registration</span>
+						</a>
+						<a href="{% url 'login' %}">
+							<span class="shop-menu-ttl">Login</span>
+						</a>
+					</li>
+					{% endif %}
+
+					<li>
+						<div class="h-cart">
+							<a href="/products/cart">
+								<i class="fa fa-shopping-cart"></i>
+								<span class="shop-menu-ttl">Cart</span>
+								(<b>{{value}}</b>)
+							</a>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- Logo, Shop-menu - end -->
+
+	<!-- Topmenu - start -->
+	<div class="header-bottom">
+		<div class="container">
+			<nav class="topmenu">
+
+	<!-- Catalog menu - start -->
+	<div class="topcatalog">
+		<a class="topcatalog-btn" href="{% static 'catalog-list.html' %}"><span>All</span> catalog</a>
+		<ul class="topcatalog-list">
+			<li>
+				<a href="/products/products">
+					Fruits
+				</a>
+				<i class="fa fa-angle-right"></i>
+				<ul>
+					<li>
+						<a href="/products/products">
+							Orange
+						</a>
+					</li>
+					<li>
+						<a href="/products/products">
+							Strawberry
+						</a>
+					</li>
+					<li>
+						<a href="/products/products">
+							Banana
+						</a>
+					</li>
+					<li>
+						<a href="/products/products">
+							Apple
+						</a>
+					</li>
+					<li>
+						<a href="/products/products">
+							Watermelom
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="/products/vegetable">
+					Vegetables
+				</a>
+				<i class="fa fa-angle-right"></i>
+				<ul>
+					<li>
+						<a href="/products/vegetable">
+							Potato
+						</a>
+					</li>
+					<li>
+						<a href="/products/vegetable">
+							Onion
+						</a>
+					</li>
+					<li>
+						<a href="/products/vegetable">
+							Capsicum
+						</a>
+					</li>
+					<li>
+						<a href="/products/vegetable">
+							Corn
+						</a>
+					</li>
+					<li>
+						<a href="/products/vegetable">
+							Etc...
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="/products/dal_rice">
+					Dal & Rice
+				</a>
+				<i class="fa fa-angle-right"></i>
+				<ul>
+					<li>
+						<a href="/products/dal_rice">
+							Types of Dal
+						</a>
+					</li>
+					<li>
+						<a href="/products/dal_rice">
+							Types of Rice
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="/products/cookie_snack">
+					Cookies and Snacks
+				</a>
+				<i class="fa fa-angle-right"></i>
+				<ul>
+					<li>
+						<a href="/products/cookie_snack">
+							Good Day Cashew Cookies
+						</a>
+					</li>
+					<li>
+						<a href="/products/cookie_snack">
+							Karachi Fruite biscuit
+						</a>
+					</li>
+					<li>
+						<a href="/products/cookie_snack">
+							Sunfest Dark Fantasy Choco Fills
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<!-- Catalog menu - end -->
+
+	<!-- Main menu - start -->
+	<button type="button" class="mainmenu-btn">Menu</button>
+
+	<ul class="mainmenu">
+		<li class="menu-item-has-children">
+			<a href="/products/">
+				Fruit
+				<i class="fa fa-angle-down"></i>
+			</a>
+			<ul class="sub-menu">
+				<li>
+					<a href="/products/">
+						Orange
+					</a>
+				</li>
+				<li>
+					<a href="/products/">
+						Strawberry
+					</a>
+				</li>
+				<li>
+					<a href="/products/">
+						Banana
+					</a>
+				</li>
+				<li>
+					<a href="/products/products">
+						Apple
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="menu-item-has-children">
+			<a href="/products/vegetable">
+				Vegetables <i class="fa fa-angle-down"></i>
+			</a>
+			<ul class="sub-menu">
+				<li>
+					<a href="/products/vegetable">
+						Potato
+					</a>
+				</li>
+				<li>
+					<a href="/products/vegetable">
+						Onion
+					</a>
+				</li>
+				<li>
+					<a href="/products/vegetable">
+						Capsicim
+					</a>
+				</li>
+				<li>
+					<a href="/products/vegetable">
+						Corn
+					</a>
+				</li>
+				<li>
+					<a href="/products/vegetable">
+						And many more
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="menu-item-has-children">
+			<a href="/products/dal_rice">
+				Dal & Rice <i class="fa fa-angle-down"></i>
+			</a>
+			<ul class="sub-menu">
+				<li>
+					<a href="/products/dal_rice">
+						Types of Dal
+					</a>
+				</li>
+				<li>
+					<a href="/products/dal_rice">
+						Types of Rice
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="menu-item-has-children">
+			<a href="/products/cookie_snack">
+				Cookies and Snacks
+			</a>
+			<ul class="sub-menu">
+				<li>
+					<a href="/products/cookie_snack">
+						Good Day Cashew Cookies
+					</a>
+				</li>
+				<li>
+					<a href="/products/cookie_snack">
+						Karachi Fruite biscuit
+					</a>
+				</li>
+				<li>
+					<a href="/products/cookie_snack">
+						Sunfest Dark Fantasy Choco Fills
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li class="menu-item-has-children">
+			<a href="#">
+				Info <i class="fa fa-angle-down"></i>
+			</a>
+			<ul class="sub-menu">
+				<li>
+					<a href="/products/order_details">
+						Your Orders
+					</a>
+				</li>
+								<li>
+					<a href="/products/cart">
+						Cart
+					</a>
+				</li>
+				<li>
+					<a href="/accounts/contacts">
+						About Us
+					</a>
+				</li>
+			</ul>
+		</li>
+
+		<li class="mainmenu-more">
+			<span>...</span>
+			<ul class="mainmenu-sub"></ul>
+		</li>
+	</ul>
+	<!-- Main menu - end -->
+
+	<!-- Search - start -->
+	<div class="topsearch">
+		<a id="topsearch-btn" class="topsearch-btn" href="#"><i class="fa fa-search"></i></a>
+		<form class="topsearch-form" action="#">
+			<input type="text" placeholder="Search products">
+			<button type="submit"><i class="fa fa-search"></i></button>
+		</form>
+	</div>
+	<!-- Search - end -->
+
+</nav>		</div>
+	</div>
+	<!-- Topmenu - end -->
+
+</header>
+<!-- Header - end -->
+
+{% csrf_token %}
+<div>
+	{% block content %}
+
+	{% endblock %}
+</div>
+
+
+<!-- Footer - start -->
+<footer class="footer-wrap">
+	<div class="footer-top">
+		<div class="container">
+			<div class="row">
+
+				<div class="stylization f-block-modal f-block-modal-content" id="f-block-modal-1">
+					<img class="f-block-modal-img" src="{% static 'img/footer/modal.jpg' %}" alt="About us">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam natus iste ullam vero, tenetur ab ipsa consectetur deleniti officiis ex debitis incidunt alias voluptatum, maxime placeat dolores veniam sunt at atque velit, soluta. Neque ea alias quia provident molestias, ratione aut esse placeat beatae sequi sed laudantium. Unde animi nihil esse, repellendus exercitationem dicta harum ab labore, voluptates explicabo in, quidem dolorum voluptas!
+				</div>
+				<div class="stylization f-block-modal f-block-modal-callback" id="f-block-modal-2">
+					<div class="modalform">
+						<form action="#" method="POST" class="form-validate">
+							<p class="modalform-ttl">Callback</p>
+							<input type="text" placeholder="Your name" data-required="text" name="name">
+							<input type="text" placeholder="Your phone" data-required="text" name="phone">
+							<button type="submit"><i class="fa fa-paper-plane"></i> Send</button>
+						</form>
+					</div>
+				</div>
+				<div class="stylization f-block-modal f-block-modal-video" id="f-block-modal-3">
+
+				</div>
+				<div class="stylization f-block-modal f-block-modal-map" id="f-block-modal-4">
+					<div class="allstore-gmap">
+						<div class="marker" data-zoom="15" data-lat="-37.81485261872975" data-lng="144.95655298233032" data-marker="img/marker.png">534-540 Little Bourke St, Melbourne VIC 3000, Australia</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="container f-menu-list">
+		<div class="row">
+			<div class="f-menu">
+				<h3>
+					About us
+				</h3>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a>I am Ayush Jain</a></li>
+					<li><a>I am from 4CE-A</a></li>
+					<li><a>18012011026</a></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="f-menu">
+				<h3>
+					Shop
+				</h3>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="/products/products">Food Store</a></li><br>
+<!--					<li><a href="{% static 'catalog-list.html' %}">Kids</a></li>-->
+<!--					<li><a href="{% static 'catalog-list.html' %}">Shoes</a></li>-->
+<!--					<li><a href="{% static 'catalog-list.html' %}">Accessories</a></li>-->
+				</ul>
+			</div>
+			<div class="f-menu">
+				<h3>
+					Information
+				</h3>
+				<ul class="nav nav-pills nav-stacked">
+<!--					<li><a href="{% static 'blog.html' %}">Blog</a></li>-->
+<!--					<li><a href="{% static 'blog.html' %}">News</a></li><br>-->
+<!--					<li><a href="{% static 'reviews.html' %}">Reviews</a></li>-->
+<!--					<li><a href="{% static 'blog.html' %}">Articles</a></li>-->
+					<li><a href="/accounts/contacts">Contacts</a></li>
+				</ul>
+			</div>
+			<div class="f-menu">
+				<h3>
+					Pages
+				</h3>
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="/accounts/contacts">About us</a></li>
+				</ul>
+			</div>
+<!--			<div class="f-subscribe">-->
+<!--				<h3>Subscribe to news</h3>-->
+<!--				<form class="f-subscribe-form" action="#">-->
+<!--					<input placeholder="Your e-mail" type="text">-->
+<!--					<button type="submit"><i class="fa fa-paper-plane"></i></button>-->
+<!--				</form>-->
+<!--				<p>Enter your email address if you want to receive our newsletter. Subscribe now!</p>-->
+<!--			</div>-->
+		</div>
+	</div>
+
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<ul class="social-icons nav navbar-nav">
+					<li>
+						<a href='/accounts/contacts' rel="nofollow" target="_blank">
+							<p>This Websight is build by Ayush Jain</p>
+						</a>
+					</li>
+					<li>
+						<a href='/accounts/contacts' rel="nofollow" target="_blank">
+							<p>18012011026</p>
+						</a>
+					</li>
+<!--					<li>-->
+<!--						<a href="{% static 'http://twitter.com/' %}" rel="nofollow" target="_blank">-->
+<!--							<i class="fa fa-twitter"></i>-->
+<!--						</a>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<a href="{% static 'http://vk.com/' %}" rel="nofollow" target="_blank">-->
+<!--							<i class="fa fa-vk"></i>-->
+<!--						</a>-->
+<!--					</li>-->
+<!--					<li>-->
+<!--						<a href="{% static 'http://instagram.com/' %}" rel="nofollow" target="_blank">-->
+<!--							<i class="fa fa-instagram"></i>-->
+<!--						</a>-->
+<!--					</li>-->
+<!--				</ul>-->
+<!--				<div class="footer-copyright">-->
+<!--					<i><a href="{% static 'https://themeforest.net/user/real-web?ref=real-web' %}">Real-Web</a></i> © Copyright 2017-->
+<!--				</div>-->
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</footer>
+<!-- Footer - end -->
+
+
+<!-- jQuery plugins/scripts - start -->
+<script src="{% static 'js/jquery-1.11.2.min.js' %}"></script>
+<script src="{% static 'js/jquery.bxslider.min.' %}"></script>
+<script src="{% static 'js/fancybox/fancybox.js' %}"></script>
+<script src="{% static 'js/fancybox/helpers/jquery.fancybox-thumbs.js' %}"></script>
+<script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+<script src="{% static 'js/swiper.jquery.min.js' %}"></script>
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/progressbar.min.js' %}"></script>
+<script src="{% static 'js/ion.rangeSlider.min.js' %}"></script>
+<script src="{% static 'js/chosen.jquery.min.js' %}"></script>
+<script src="{% static 'js/jQuery.Brazzers-Carousel.js' %}"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDhAYvx0GmLyN5hlf6Uv_e9pPvUT3YpozE' %}"></script>
+<script src="{% static 'js/gmap.js' %}"></script>
+<!-- jQuery plugins/scripts - end -->
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter42088244 = new Ya.Metrika({ id:42088244, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "../mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/42088244" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+</body>
+
+<!-- Mirrored from allstore-html.real-web.pro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Jan 2020 11:43:13 GMT -->
+</html>

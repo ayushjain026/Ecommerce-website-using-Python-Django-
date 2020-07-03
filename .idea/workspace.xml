@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="af0c0752-e9c8-4d92-a449-256d299b8df9" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1anvEKYOvTYJGl7SUXdxr6Xf8Qi" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
+    <property name="last_opened_file_path" value="E:/Second Year/sem-4/Python/mixnmatch" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Second Year\sem-4\Python\PyShop\products\templates" />
+      <recent name="E:\Second Year\sem-4\Python\PyShop\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Second Year\sem-4\Python\PyShop\accounts\templates" />
+      <recent name="E:\Second Year\sem-4\Python\PyShop\products\templates" />
+      <recent name="E:\Second Year\sem-4\Python\PyShop\Shop" />
+      <recent name="E:\Second Year\sem-4\Python\PyShop\products\migrations\" />
+      <recent name="E:\Second Year\sem-4\Python\PyShop\user\templates" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.cart11.html">
+    <configuration name="base111.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PyShop/products/templates/base111.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="cart11.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PyShop/products/templates/cart11.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PyShop/products/templates/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PyShop/accounts/templates/login.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="register.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PyShop/accounts/templates/register.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.cart11.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.base111.html" />
+        <item itemvalue="JavaScript Debug.register.html" />
+        <item itemvalue="JavaScript Debug.login.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="af0c0752-e9c8-4d92-a449-256d299b8df9" name="Default Changelist" comment="" />
+      <created>1587384059367</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587384059367</updated>
+      <workItem from="1587384071200" duration="5142000" />
+      <workItem from="1587399043667" duration="1058000" />
+      <workItem from="1587469355565" duration="3044000" />
+      <workItem from="1587552170486" duration="6272000" />
+      <workItem from="1587570004392" duration="1213000" />
+      <workItem from="1587621061907" duration="840000" />
+      <workItem from="1587833908469" duration="925000" />
+      <workItem from="1587884378587" duration="5333000" />
+      <workItem from="1587918500915" duration="9139000" />
+      <workItem from="1587960014690" duration="1493000" />
+      <workItem from="1588002328589" duration="2235000" />
+      <workItem from="1588004912288" duration="4310000" />
+      <workItem from="1588105747185" duration="660000" />
+      <workItem from="1588157581931" duration="3330000" />
+      <workItem from="1588185177904" duration="3705000" />
+      <workItem from="1588243250265" duration="5037000" />
+      <workItem from="1588264631378" duration="2624000" />
+      <workItem from="1588311281331" duration="3344000" />
+      <workItem from="1588319346439" duration="2090000" />
+      <workItem from="1588329901293" duration="13403000" />
+      <workItem from="1588392679764" duration="524000" />
+      <workItem from="1588449985257" duration="1647000" />
+      <workItem from="1588494291891" duration="8423000" />
+      <workItem from="1588511260093" duration="1844000" />
+      <workItem from="1588520765000" duration="6975000" />
+      <workItem from="1588571788217" duration="2592000" />
+      <workItem from="1588574454577" duration="10707000" />
+      <workItem from="1588596931825" duration="448000" />
+      <workItem from="1588603416375" duration="3975000" />
+      <workItem from="1588657251132" duration="7492000" />
+      <workItem from="1588675216844" duration="13463000" />
+      <workItem from="1588694300353" duration="11841000" />
+      <workItem from="1588743448837" duration="4164000" />
+      <workItem from="1588749566074" duration="2549000" />
+      <workItem from="1588752146230" duration="5688000" />
+      <workItem from="1588779703526" duration="2545000" />
+      <workItem from="1588846460943" duration="1214000" />
+      <workItem from="1588933014267" duration="1058000" />
+      <workItem from="1588934301519" duration="183000" />
+      <workItem from="1589191024377" duration="3577000" />
+      <workItem from="1589195403087" duration="28000" />
+      <workItem from="1589198440169" duration="1266000" />
+      <workItem from="1589302730408" duration="2389000" />
+      <workItem from="1589352143414" duration="344000" />
+      <workItem from="1589358558265" duration="680000" />
+      <workItem from="1589431947826" duration="2755000" />
+      <workItem from="1589720305942" duration="3647000" />
+      <workItem from="1589956220328" duration="38000" />
+      <workItem from="1590123562746" duration="1590000" />
+      <workItem from="1590130031257" duration="50000" />
+      <workItem from="1590302400750" duration="2546000" />
+      <workItem from="1590467621970" duration="186000" />
+      <workItem from="1590596502249" duration="4269000" />
+      <workItem from="1590731149730" duration="6415000" />
+      <workItem from="1590738764932" duration="66000" />
+      <workItem from="1590812535081" duration="384000" />
+      <workItem from="1591415951366" duration="1815000" />
+      <workItem from="1591418465118" duration="5857000" />
+      <workItem from="1591433104647" duration="840000" />
+      <workItem from="1591603517437" duration="256000" />
+      <workItem from="1591956288239" duration="1345000" />
+      <workItem from="1591976011338" duration="154000" />
+      <workItem from="1592040300594" duration="29000" />
+      <workItem from="1593527106977" duration="87000" />
+      <workItem from="1593791318965" duration="617000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

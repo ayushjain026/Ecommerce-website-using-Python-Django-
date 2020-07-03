@@ -1,0 +1,53 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block content %}
+
+
+<main>
+<section class="container stylization maincont">
+
+<h1 class="main-ttl"><span>Your Orders</span></h1>
+<!-- Cart Items - start -->
+
+	<div class="cart-items-wrap">
+		<table class="cart-items">
+			<thead>
+			<tr>
+				<td class="cart-image"><b>Date</b></td>
+				<td class="cart-image"><b>Order ID</b></td>
+				<td class="cart-ttl"><b>Items</b></td>
+				<td class="cart-price"><b>Total</b></td>
+<!--				<td class="cart-price"><b>{{user.username}}</b></td>-->
+				<td class="cart-del">&nbsp</td>
+			</tr>
+			</thead>
+            <tbody>
+				<tr>
+                    {% for order in order %}
+
+                    {% if user.username == order.user %}
+
+					<td class="cart-ttl">
+						{{order.date}}
+					</td>
+					<td class="cart-ttl">
+						{{order.id}}
+					</td>
+					<td class="cart-price">
+						<b>{{order.item}}</b>
+					</td>
+                    <td class="cart-price">
+						<b><img src="https://banner2.cleanpng.com/20180714/jqc/kisspng-indian-rupee-sign-currency-india-clipart-5b4a4191728308.6596657915315931054691.jpg" height="10px" width="10px">&nbsp{{order.bill_amount}}</b>
+					</td>
+					<td>
+					</td>
+				</tr>
+                {% endif %}
+                {% endfor %}
+			</tbody>
+        </table>
+    </div>
+</section>
+</main>
+
+{% endblock %}
